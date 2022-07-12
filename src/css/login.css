@@ -1,0 +1,122 @@
+
+.container--desktop{
+    display: none;
+}
+
+.container--celular{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 7px;
+}
+
+.celular--login{
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+.celular--usuario{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;  
+}
+
+.celular--senha{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.06rem;
+    color: #343A40;
+}
+
+input{
+    border: 2px solid #F1F3F5;
+    border-radius: 4px;
+    padding: 9px 18px;
+    gap: 10px;
+}
+
+input::placeholder{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.19rem;
+    color: #343A40;
+}
+
+button{
+    background: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 4px;
+    width: 38vh;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.19rem;
+    color: #FFFFFF;;
+}
+
+
+
+
+
+@media(min-width: 586px){
+
+    body{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .container{
+        display: flex;
+        width: 62%;
+        height: 485px;
+        margin-top: 0;
+        gap: 0;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+    }
+
+    .container--desktop{
+        display: block;
+        background-color: #415AF3;
+        width: 60%;
+         
+    }
+
+
+    .desktop--titulo{
+        font-weight: 600;
+        font-size: 1.75rem;
+        line-height: 2.625rem;
+        color: #FFFFFF;
+    }
+
+    .desktop--frase1{
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: #FFFFFF;
+    }
+
+    .desktop--frase2{
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: #E9ECEF;
+    }    
+
+    .container--celular{
+        width: 62%;
+        height: 485px;
+        margin-top: 0;
+        gap: 2px;
+        justify-content: flex-start;
+        align-items: baseline;
+
+
+    }
+
+}
