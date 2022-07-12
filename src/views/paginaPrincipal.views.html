@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/paginaPrincipal.css">
+        <title>Kenzie Habit</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container__cabecalho">
+                <div class="container__cabecalho--superior">
+                    <div class="cabecalho__superior--logotipo">
+                        <h2 class="logotipo">KenzieHabit</h2>
+                    </div>
+
+                    <div class="cabecalho__superior--perfil">
+                        <img class="menu__perfil" src="../assets/img/user.png" alt="">
+                    </div>
+                </div>
+
+                <div class="container__auxiliar ">
+                    <div class="container__cabecalho--inferior">
+                        <div class="cabecalho__inferior--foto">
+                            <img class="foto__perfil" src="../assets/img/user.png" alt="">
+                        </div>
+    
+                        <div class="cabecalho__inferior--nome">
+                            <h2 class="nome__usuario">nome-usuário</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container__principal">
+                <div class="barra_superior">
+                    <div class="barra__superior--tarefas">
+                        <h2 class="titulo">Tarefas</h2>
+                    </div>
+                    <div class="barra__superior--filtros">
+                        
+                        <h2 class="filtro todos">Todos</h2>
+                        <h2 class="filtro concluido">Concluídos</h2>
+                        <button class="criar__habito">Criar</button>
+                        
+                    </div>
+                </div>
+                <div class="container__habitos">
+                    <div class="legenda__habitos">
+                        <h3 class="legenda__habitos--status">Status</h3>
+                        <h3 class="legenda__habitos--titulo">Título</h3>
+                        <h3 class="legenda__habitos--descricao">Descrição</h3>
+                        <h3 class="legenda__habitos--categoria">Categoria</h3>
+                        <h3 class="legenda__habitos--editar">Editar</h3>
+                    </div>
+
+                    <!-- -----------------------------------cards de hábitos----------------------------------- -->
+                    
+                    <div class="container__habitos--cards">
+                       
+                        <input class="checkbox__card" type="checkbox">
+                        <div class="card__titulo">
+                            <h2 class="info__habitos--titulo">Fazer exercícios na segunda pela manhã na praça</h2>
+                        </div>
+                        <div class="card__descricao">
+                            <h2 class="info__habitos--descricao">Ir correr na praça próxima ao centro da cidade por 30 minutos</h2>
+                        </div>
+                        <h2 class="info__habitos--categoria">Saúde</h2>
+                        
+                        <div class="container__editar">
+                            <div class="reticencias"></div>
+                            <div class="reticencias"></div>
+                            <div class="reticencias"></div>
+                        </div>
+                    </div>
+
+                    <!-- ----------------------------------fim dos cards---------------------------------- -->
+                    
+                </div>
+            </div>
+            <div class="container__carregar_mais">
+                <button class="botao__carregar_mais">Carregar mais</button>
+            </div>
+        </main>
+
+        <script src=""></script>
+    </body>
+</html>
