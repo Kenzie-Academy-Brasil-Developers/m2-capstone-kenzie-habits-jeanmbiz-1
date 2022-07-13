@@ -1,17 +1,19 @@
 
-:root {
-  --cor-azul-medio: rgb(65, 90, 243);
-  --cor-azul-escuro: rgb(65, 80, 210);
-  --cor-azul-claro: rgb(215, 228, 251);
-  --cor-cinza-1: rgb(33, 37, 41);
-  --cor-cinza-2: rgb(52, 58, 64);
-  --cor-cinza-3: rgb(173, 181, 189);
-  --cor-cinza-4: rgb(233, 236, 239);
-  --cor-cinza-5: rgb(241, 243, 245);
-  --cor-cinza-6: rgb(248, 249, 250);
-  --cor-verde-escuro: rgb(86, 207, 142);
-  --cor-verde-claro: rgb(230, 248, 238);
-  --cor-vermelho-1: rgb(230, 68, 69);
-  --cor-vermelho-2: rgb(240, 56, 57);
+:root{
+  --cor-azul-medio: 65, 90, 243;
+  --cor-azul-escuro: 65, 80, 210;
+  --cor-azul-claro: 215, 228, 251;
+  --cor-azul-medio-2: 160, 173, 249;
+  --cor-cinza-1: 33, 37, 41;
+  --cor-cinza-2: 52, 58, 64;
+  --cor-cinza-3: 173, 181, 189;
+  --cor-cinza-4: 233, 236, 239;
+  --cor-cinza-5: 241, 243, 245;
+  --cor-cinza-6: 248, 249, 250;
+  --cor-verde-escuro: 86, 207, 142;
+  --cor-verde-claro: 230, 248, 238,
+  --cor-vermelho-1: 230, 68, 69;
+  --cor-vermelho-2: 240, 56, 57;
+
   --font-body: 'Inter', sans-serif;
 }
