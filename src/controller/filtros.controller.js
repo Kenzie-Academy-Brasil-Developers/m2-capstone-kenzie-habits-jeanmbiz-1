@@ -1,9 +1,11 @@
 import RequisicoesHabitos from './habitos.controller.js'
 
-const containerHabitos = document.querySelector('.container__habitos');
+const containerCards   = document.querySelector('.container__cards')
+
 
 export default class NovoHabito {
-    static criarCardHabito () {
+    static criarCardHabito (habito) {
+
         const divCard      = document.createElement('div');
         const checkbox     = document.createElement('input');
         const divTitulo    = document.createElement('div');
@@ -30,61 +32,29 @@ export default class NovoHabito {
     
         checkbox.type = 'checkbox';
     
-        titulo   .innerText = 'Fazer exercícios';
-        descricao.innerText = 'Ir correr na praça próxima ao centro da cidade por 30 minutos';
-        categoria.innerText = 'Saúde';
+        titulo   .innerText = habito.habit_title;
+        descricao.innerText = habito.habit_description;
+        categoria.innerText = habito.habit_category;
+        checkbox .checked   = habito.habit_status;
     
-        divTitulo       .append(titulo);
-        divDescricao    .append(descricao);
-        divEditar       .append(editar_1, editar_2, editar_3);
-        divCard         .append(checkbox, divTitulo, divDescricao, categoria, divEditar);
-        containerHabitos.append(divCard);
-    
+        divTitulo     .append(titulo);
+        divDescricao  .append(descricao);
+        divEditar     .append(editar_1, editar_2, editar_3);
+        divCard       .append(checkbox, divTitulo, divDescricao, categoria, divEditar);
+        containerCards.append(divCard);
     }
 }
 
+MostrarTodos()
 
+const todos = document.querySelector('.todos');
+todos.addEventListener('click', MostrarTodos);
 
-/* teste */
+export async function MostrarTodos () {
+    containerCards.innerHTML = '';
 
-function criarCardHabitos () {
-    const divCard      = document.createElement('div');
-    const checkbox     = document.createElement('input');
-    const divTitulo    = document.createElement('div');
-    const titulo       = document.createElement('h2');
-    const divDescricao = document.createElement('div');
-    const descricao    = document.createElement('h2');
-    const categoria    = document.createElement('h2');
-    const divEditar    = document.createElement('div');
-    const editar_1     = document.createElement('div');
-    const editar_2     = document.createElement('div');
-    const editar_3     = document.createElement('div');
+    const listaHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
 
-    divCard     .classList.add('container__habitos--cards');
-    checkbox    .classList.add('checkbox__card');
-    divTitulo   .classList.add('card__titulo');
-    titulo      .classList.add('info__habitos--titulo');
-    divDescricao.classList.add('card__descricao');
-    descricao   .classList.add('info__habitos--descricao');
-    categoria   .classList.add('info__habitos--categoria');
-    divEditar   .classList.add('container__editar');
-    editar_1    .classList.add('reticencias');
-    editar_2    .classList.add('reticencias');
-    editar_3    .classList.add('reticencias');
-
-    checkbox.type = 'checkbox';
-
-    titulo   .innerText = 'Fazer exercícios';
-    descricao.innerText = 'Ir correr na praça próxima ao centro da cidade por 30 minutos';
-    categoria.innerText = 'Saúde';
-
-    divTitulo       .append(titulo);
-    divDescricao    .append(descricao);
-    divEditar       .append(editar_1, editar_2, editar_3);
-    divCard         .append(checkbox, divTitulo, divDescricao, categoria, divEditar);
-    containerHabitos.append(divCard);
-
+    listaHabitos.forEach(habito => NovoHabito.criarCardHabito(habito));
 }
 
-const criar = document.querySelector('.criar__habito');
-criar.addEventListener('click', criarCardHabitos);
