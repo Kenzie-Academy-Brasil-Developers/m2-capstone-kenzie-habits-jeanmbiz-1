@@ -172,7 +172,7 @@
 
 .info {
     height: 22rem;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 @media screen and (min-width: 600px) {
@@ -197,6 +197,13 @@
 
 .modal__titulo > h4 {
     font-size: 20px;
+    font-weight: 600;
+    color: var(--cor-cinza-1);
+}
+
+.texto__modal > h4 {
+    margin-bottom: 0.5rem;
+    font-size: 18px;
     font-weight: 600;
     color: var(--cor-cinza-1);
 }
