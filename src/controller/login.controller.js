@@ -1,6 +1,5 @@
 
 import RequisicoesUsuario from "./usuario.controller.js";
-import {MostrarTodos} from './filtros.controller.js';
 
 const botaoLogin = document.querySelector('.celular__botao');
 
