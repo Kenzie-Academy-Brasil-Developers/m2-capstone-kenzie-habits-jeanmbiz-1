@@ -142,7 +142,7 @@
         top: 0;
         left: 0;
         z-index: 0;
-        background-color: rgb(var(--cor-cinza-1), 0.55);
+        background-color: var(--cor-cinza-transparencia);
     }
     
     .modal__edicao__perfil {
@@ -164,7 +164,7 @@
         justify-content: center;
         flex-direction: column;
         font-family: 'Inter', sans-serif;
-        background-color: rgb(var(--cor-cinza-6), 1);
+        background-color: var(--cor-cinza-6);
     }
     
     @media screen and (min-width: 600px) {
@@ -202,7 +202,7 @@
     .modal__titulo > h4 {
         font-size: 20px;
         font-weight: 600;
-        color: (--cor-cinza-1);
+        color: var(--cor-cinza-1);
     }
     
     .botao__fechar {
@@ -226,7 +226,7 @@
         font-weight: 400;
         margin-top: 1.7rem;
         margin-bottom: 0.6rem;
-        color:(--cor-cinza-2);
+        color: var(--cor-cinza-2);
     }
     
     form > input {
@@ -237,8 +237,8 @@
         border-radius: 0.2rem;
         font-size: 1rem;
         font-weight: 400;
-        color:(--cor-cinza-2);
-        background-color: rgb(--cor-cinza-5);
+        color: var(--cor-cinza-2);
+        background-color: var(--cor-cinza-5);
     }
     
     @media screen and (min-width: 589px) {
@@ -254,8 +254,8 @@
         border: none;
         border-radius: 0.2rem;
         font-weight: 500;
-        background-color: rgb(var(--cor-cinza-5), 1);
-        color:(--cor-cinza-2);
+        background-color: var(--cor-cinza-5);
+        color: var(--cor-cinza-2);
     }
     
     @media screen and (min-width: 600px) {
@@ -274,12 +274,12 @@
     .status__form {
         font-weight: 500;
         font-size: 1rem;
-        color: rgb(var(--cor-cinza-1), 1);
+        color: var(--cor-cinza-1);
     }
     
     .checkbox {
         width: 1rem;
-        border: 1px solid rgb(var(--cor-cinza-3), 1);
+        border: 1px solid var(--cor-cinza-3);
         background-color: transparent;
     }
     
@@ -298,8 +298,8 @@
         border-radius: 0.3rem;
         font-size: 1rem;
         font-weight: 600;
-        background-color: rgb(var(--cor-cinza-5), 1);
-        color: rgba(var(--cor-cinza-2), 1);
+        background-color: var(--cor-cinza-5);
+        color: var(--cor-cinza-2);
     }
     
     .botao__salvar {
@@ -309,12 +309,12 @@
         border-radius: 0.3rem;
         font-size: 1rem;
         font-weight: 600;
-        background-color: rgb(var(--cor-azul-medio-2), 1);
-        color: rgba(var(--cor-cinza-6), 1);
+        background-color: var(--cor-azul-medio-2);
+        color: var(--cor-cinza-6);
     }
     
     .excluir {
-        background-color: rgb(var(--cor-vermelho-2), 1);
+        background-color: var(--cor-vermelho-2);
         font-size: 0.6rem;
     }
     

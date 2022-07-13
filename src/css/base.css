@@ -1,8 +1,10 @@
 
 :root {
   --cor-azul-medio: rgb(65, 90, 243);
+  --cor-azul-medio-2: rgb(160, 173, 249);
   --cor-azul-escuro: rgb(65, 80, 210);
   --cor-azul-claro: rgb(215, 228, 251);
+  --cor-cinza-transparencia: rgb(33, 37, 41, 0.55);
   --cor-cinza-1: rgb(33, 37, 41);
   --cor-cinza-2: rgb(52, 58, 64);
   --cor-cinza-3: rgb(173, 181, 189);
