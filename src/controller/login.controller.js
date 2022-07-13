@@ -1,7 +1,7 @@
 
 import RequisicoesUsuario from "./usuario.controller.js";
 
-const botaoLogin = document.querySelector('.celular--botao');
+const botaoLogin = document.querySelector('.celular__botao');
 
 botaoLogin.addEventListener('click', efetuarLogin );
 
@@ -22,4 +22,3 @@ async function efetuarLogin(evento){
         location.href = 'https://www.youtube.com/'
     }
 }
-
