@@ -5,7 +5,6 @@ const botaoLogin = document.querySelector('.celular__botao');
 
 botaoLogin.addEventListener('click', efetuarLogin );
 
-export default efetuarLogin
 async function efetuarLogin(evento){
     evento.preventDefault();
 
@@ -19,6 +18,6 @@ async function efetuarLogin(evento){
 
     const resposta = await RequisicoesUsuario.login(dados)
     if ('token' in resposta){
-        location.href = 'https://www.youtube.com/'
+        location.href = './src/views/paginaPrincipal.views.html'
     }
 }
