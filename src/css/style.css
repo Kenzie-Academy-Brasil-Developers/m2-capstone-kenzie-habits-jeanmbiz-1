@@ -1,5 +1,4 @@
 /*MODAL DE CRIAR HÁBITO*/
-
 .divHabito {
     width: 100vw;
     height: 100vh;
@@ -7,69 +6,66 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-
-    background-color: var(--cor-cinza-6);
+    z-index: 1;  
 }
 
-.divHabito__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: inherit;
-
-    background-color: var(--cor-cinza-3);
-}
-
-.divHabito__modal {
-    width: 24.5rem;
-    max-width: 100%;
-    height: 24rem;
-
-    border-radius: 16px;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    position: relative;
-
-    background-color: var(--cor-cinza-6);
-}   
-
-.divHabito__h2 {
-    font-family: var(--font-body);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--cor-cinza-2)
-}    
-
-    .divHabito__p {
-        position: absolute;
-        top: 3rem;
-        right: 1.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-
-        font-family: var(--font-body);
-        background-color: transparent;
-        cursor: pointer;
-        color: var(--cor-cinza-3);
+    .divHabito__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;        
     }
 
-.divHabito__form {
-    width: 400px;
-    line-height: 1.8;
-}    
+    .divHabito__modal {
+        width: 24.5rem;
+        max-width: 100%;
+        height: 24rem;
 
-.divHabito__form > div {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        position: relative;
+    }   
+    
+    .divHabito__h2 {
+        font-family: var(--font-body);
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--cor-cinza-2)
+    }    
 
-    margin: 5px 0;
-}
+        .divHabito__p > a {
+            position: absolute;
+            top: 3rem;
+            right: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+
+            text-decoration: none;
+
+            font-family: var(--font-body);
+            background-color: transparent;
+            cursor: pointer;
+            color: var(--cor-cinza-3);
+        }
+
+    .divHabito__form {
+        width: 400px;
+        line-height: 1.8;
+    }    
+    
+    .divHabito__form > div {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+
+        margin: 5px 0;
+    }
+
 
 .divHabito__form > div > label {
     font-family: var(--font-body);
