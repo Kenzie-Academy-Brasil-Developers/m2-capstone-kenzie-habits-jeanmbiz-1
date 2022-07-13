@@ -15,9 +15,9 @@ export default class CriarHabito {
         }
     }
 
-    static async criaHabito(){
+    static criaHabito(){
         const form = document.getElementById("criaForm")
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault()
             const habitos = this.criaDadosFormulario()
             await RequisicoesHabitos.criarHabito(habitos)
