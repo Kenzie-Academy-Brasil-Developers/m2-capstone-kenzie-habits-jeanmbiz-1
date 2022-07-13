@@ -3,7 +3,7 @@ import RequisicoesHabitos from './habitos.controller.js'
 const containerCards   = document.querySelector('.container__cards')
 
 
-export default class NovoHabito {
+export default class Habito {
     static criarCardHabito (habito) {
 
         const divCard      = document.createElement('div');
@@ -30,13 +30,30 @@ export default class NovoHabito {
         editar_2    .classList.add('reticencias');
         editar_3    .classList.add('reticencias');
     
+        divEditar.title  = habito.habit_id;
+        editar_1.title   = habito.habit_id;
+        editar_2.title   = habito.habit_id;
+        editar_3.title   = habito.habit_id;
+
         checkbox.type = 'checkbox';
-    
+        
         titulo   .innerText = habito.habit_title;
         descricao.innerText = habito.habit_description;
         categoria.innerText = habito.habit_category;
         checkbox .checked   = habito.habit_status;
-    
+
+        if(checkbox.checked) {
+            titulo.style  = 'text-decoration: line-through';
+            divCard.style = 'background-color: var(--cor-cinza-4)';
+            checkbox.disabled = true;
+        } else {
+            checkbox.addEventListener('change', () =>  ConcluirHabito(habito, checkbox, titulo, divCard));
+        }
+
+        divEditar.addEventListener('click', (evento) => {
+            localStorage.setItem("@kenzie-habit:habit_id", evento.target.title);
+        });
+
         divTitulo     .append(titulo);
         divDescricao  .append(descricao);
         divEditar     .append(editar_1, editar_2, editar_3);
@@ -47,6 +64,7 @@ export default class NovoHabito {
 
 MostrarTodos()
 
+
 const todos = document.querySelector('.todos');
 todos.addEventListener('click', MostrarTodos);
 
@@ -55,6 +73,32 @@ export async function MostrarTodos () {
 
     const listaHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
 
-    listaHabitos.forEach(habito => NovoHabito.criarCardHabito(habito));
+    listaHabitos.forEach(habito => Habito.criarCardHabito(habito));
+}
+
+
+export function ConcluirHabito (habito, checkbox, titulo, divCard) {
+
+    titulo.style = 'text-decoration: line-through';
+    divCard.style = 'background-color: var(--cor-cinza-4)';
+
+    checkbox.disabled = true;
+
+    RequisicoesHabitos.marcarComoFeito(habito.habit_id);
+}
+
+
+const concluidos = document.querySelector('.concluido');
+concluidos.addEventListener('click', MostrarConcluidos);
+
+export async function MostrarConcluidos () {
+    containerCards.innerHTML = '';
+
+    const todosHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
+
+    todosHabitos.forEach(habito => {if(habito.habit_status === true) {
+            Habito.criarCardHabito(habito)
+        }}
+    );
 }
 
