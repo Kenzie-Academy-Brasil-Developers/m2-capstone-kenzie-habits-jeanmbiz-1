@@ -19,6 +19,6 @@ async function efetuarLogin(evento){
 
     const resposta = await RequisicoesUsuario.login(dados)
     if ('token' in resposta){
-        location.href = 'https://www.youtube.com/'
+        location.href = './src/views/paginaPrincipal.views.html'
     }
 }
