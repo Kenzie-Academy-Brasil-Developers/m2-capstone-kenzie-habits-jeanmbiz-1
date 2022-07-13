@@ -1,0 +1,361 @@
+@import url('./reset.css');
+@import url('./base.css');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-body);
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+}
+
+.container__cabecalho {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__cabecalho--superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    width: 90%;
+    max-width: 50rem;
+}
+
+.cabecalho__superior--logotipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logotipo {
+    color: var(--cor-azul-medio);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cabecalho__superior--perfil {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--cor-azul-medio);
+    cursor: pointer;
+}
+
+.container_menu {
+    
+}
+
+.menu__perfil {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    display: none;
+}
+
+.container__auxiliar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-azul-medio);
+}
+
+.container__cabecalho--inferior {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 90%;
+    max-width: 50rem;
+    gap: 1.5rem;
+}
+
+.cabecalho__inferior--foto {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--cor-cinza-5);
+    background-color: var(--cor-cinza-6);
+}
+
+.foto__perfil {
+    width: 100%;
+    height: 100%;
+}
+
+.nome__usuario {
+    color: var(--cor-cinza-6);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__principal {
+    width: 90%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    border: solid 1px var(--cor-cinza-3);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.barra_superior {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    font-weight: 600;
+}
+
+.barra__superior--filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.filtro {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.criar__habito {
+    padding: 0.2rem 1rem;
+    background-color: var(--cor-azul-medio);
+    border: 0px transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color: var(--cor-cinza-6);
+}
+
+.container__habitos {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.legenda__habitos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    gap: 1rem;
+}
+
+.legenda__habitos--status {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+}
+
+.legenda__habitos--titulo {
+    width: 60%;
+}
+
+.legenda__habitos--descricao {
+    display: none;
+}
+
+.legenda__habitos--categoria {
+    display: none;
+}
+
+.legenda__habitos--editar {
+    width: 22%;
+    display: flex;
+    justify-content: center;
+}
+
+.container__habitos--cards {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    gap: 1rem;
+    border: solid 1px var(--cor-cinza-3);
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+
+}
+
+.checkbox__card {
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card__titulo {
+    font-size: 1rem;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card__descricao {
+    display: none;
+}
+
+.info__habitos--categoria {
+    display: none;
+}
+
+.container__editar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 100%;
+    gap: 0.2rem;
+    width: 22%;
+    cursor: pointer;
+}
+
+.reticencias {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--cor-cinza-3);
+}
+
+.container__carregar_mais {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.botao__carregar_mais {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-azul-medio);
+    border: 0px transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color: var(--cor-cinza-6);
+}
+
+
+
+@media screen and (min-width: 769px) {
+    .legenda__habitos--status {
+        width: 15%;
+    }
+
+    .legenda__habitos--titulo {
+        width: 55%;
+    }
+
+    .legenda__habitos--categoria {
+        display: flex;
+        justify-content: center;
+        width: 15%;
+    }
+
+    .legenda__habitos--editar {
+        width: 15%;
+    }
+
+    .checkbox__card {
+        width: 15%;
+    }
+
+    .card__titulo {
+        width: 55%;
+    }
+
+    .info__habitos--categoria {
+        display: flex;
+        justify-content: center;
+        width: 15%;
+        color: var(--cor-azul-medio);
+        font-weight: 500;
+        background-color: var(--cor-cinza-6);
+        border-radius: 0.2rem;
+        padding: 0.2rem;
+    }
+
+    .container__editar {
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .legenda__habitos--status {
+        width: 10%;
+    }
+
+    .legenda__habitos--titulo {
+        width: 35%;
+    }
+
+    .legenda__habitos--categoria {
+        width: 10%;
+    }
+
+    .legenda__habitos--descricao {
+        display: flex;
+        width: 35%;
+    }
+
+    .legenda__habitos--editar {
+        width: 10%;
+    }
+
+    .checkbox__card {
+        width: 10%;
+    }
+
+    .card__titulo {
+        width: 35%;
+    }
+
+    .card__descricao {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 35%;
+    }
+
+    .info__habitos--categoria {
+        width: 10%;
+    }
+
+    .container__editar {
+        width: 10%;
+    }
+}
