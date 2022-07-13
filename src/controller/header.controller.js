@@ -1,5 +1,3 @@
-import RequisicoesHabitos from "./habitos.controller.js";
-
 const usuario = JSON.parse(localStorage.getItem("@kenzie-habits:user"))
 
 fazerHeader()
