@@ -303,7 +303,7 @@ main {
         width: 15%;
         color: var(--cor-azul-medio);
         font-weight: 500;
-        background-color: var(--cor-cinza-6);
+        background-color: var(--cor-azul-claro);
         border-radius: 0.2rem;
         padding: 0.2rem;
     }
