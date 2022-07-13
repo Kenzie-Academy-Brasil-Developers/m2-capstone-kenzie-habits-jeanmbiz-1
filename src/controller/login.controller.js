@@ -1,4 +1,3 @@
-
 import RequisicoesUsuario from "./usuario.controller.js";
 
 const botaoLogin = document.querySelector('.celular__botao');
