@@ -1,3 +1,6 @@
 import CriarHabito from "./controller/criarHabito.controller.js";
 
-CriarHabito.criaHabito()
+const botaoCriaHabito = document.getElementById("botaoCriarHabito")
+botaoCriaHabito.addEventListener("click", (event) => {
+    CriarHabito.modalHabito()
+})
