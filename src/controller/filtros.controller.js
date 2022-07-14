@@ -43,8 +43,9 @@ export default class Habito {
         checkbox .checked   = habito.habit_status;
 
         if(checkbox.checked) {
-            titulo.style  = 'text-decoration: line-through';
-            divCard.style = 'background-color: var(--cor-cinza-4)';
+            titulo.style      = 'text-decoration: line-through';
+            divCard.style     = 'background-color: var(--cor-cinza-4)';
+            checkbox.style    = 'cursor: not-allowed;'
             checkbox.disabled = true;
         } else {
             checkbox.addEventListener('change', () =>  ConcluirHabito(habito, checkbox, titulo, divCard));
@@ -79,8 +80,11 @@ export async function MostrarTodos () {
 
 export function ConcluirHabito (habito, checkbox, titulo, divCard) {
 
-    titulo.style = 'text-decoration: line-through';
-    divCard.style = 'background-color: var(--cor-cinza-4)';
+    titulo.style   = 'text-decoration: line-through';
+    divCard.style  = 'background-color: var(--cor-cinza-4)';
+    checkbox.style = 'cursor: not-allowed;'
+
+    checkbox.title = 'Bloquado'
 
     checkbox.disabled = true;
 
