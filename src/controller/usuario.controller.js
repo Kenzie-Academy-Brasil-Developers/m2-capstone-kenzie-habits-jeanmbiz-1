@@ -29,6 +29,9 @@ export default class RequisicoesUsuario {
       body: JSON.stringify(dado_usuario)
     })
     .then(res => res.json())
+    .then(res => {
+      localStorage.setItem("@kenzie-habits:user", JSON.stringify(res))
+      console.log(res)})
     .catch(err => console.log(err));
   }
 }

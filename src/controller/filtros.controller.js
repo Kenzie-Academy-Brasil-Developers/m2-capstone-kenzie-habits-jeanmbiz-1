@@ -1,6 +1,8 @@
 import RequisicoesHabitos from './habitos.controller.js'
+import ComponentesModais from './modais.controller.js';
 
 const containerCards   = document.querySelector('.container__cards')
+
 
 
 export default class Habito {
@@ -50,8 +52,9 @@ export default class Habito {
             checkbox.addEventListener('change', () =>  ConcluirHabito(habito, checkbox, titulo, divCard));
         }
 
-        divEditar.addEventListener('click', (evento) => {
+        divEditar.addEventListener('click', async (evento) => {
             localStorage.setItem("@kenzie-habit:habit_id", evento.target.title);
+            await ComponentesModais.modalEditarHabito();
         });
 
         divTitulo     .append(titulo);
@@ -100,5 +103,6 @@ export async function MostrarConcluidos () {
             Habito.criarCardHabito(habito)
         }}
     );
+    
 }
 

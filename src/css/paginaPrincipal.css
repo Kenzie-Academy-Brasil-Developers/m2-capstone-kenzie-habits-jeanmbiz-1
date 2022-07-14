@@ -121,6 +121,7 @@ header {
     border-radius: 50%;
     border: 2px solid var(--cor-cinza-5);
     background-color: var(--cor-cinza-6);
+    overflow: hidden;
 }
 
 .foto__perfil {

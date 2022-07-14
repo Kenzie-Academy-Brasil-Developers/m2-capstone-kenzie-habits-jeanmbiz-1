@@ -1,7 +1,6 @@
 import RequisicoesHabitos from "./habitos.controller.js";
 import RequisicoesUsuario from "./usuario.controller.js";
 
-////* DESCOMENTAR O DISPLAY NONE DAS FUNÇÕES MODAIS APÓS LINKAR A PÁGINA INICIAL*////
 
 export default class ComponentesModais {
 
@@ -61,16 +60,13 @@ export default class ComponentesModais {
         button.addEventListener("click", async (event) => {
             event.preventDefault();
             
-            const data ={}
-            const valoresInput = [...event.srcElement.form];
-
-            valoresInput.forEach((input) => {
-                if(input.value !== "") {
-                    data[input.name] = input.value;
-                }
-            })
-            console.log(data)
+            const data ={
+                usr_name: form[0].value,
+                usr_image: form[1].value,
+            }
+            
             await RequisicoesUsuario.atualizarPerfil(data);
+            window.location.reload(true);
         })
 
 
@@ -84,12 +80,10 @@ export default class ComponentesModais {
         modalEdicao.append(modalInfo);
         modal.append(modalEdicao);
         this.body.append(modal);
-
-        // modal.style.display = "none";
     }
 
 
-    static modalEditarHabito() {
+    static async modalEditarHabito() {
 
         const modal         = document.createElement("div");
         const modalEdicao   = document.createElement("div");
@@ -134,6 +128,11 @@ export default class ComponentesModais {
         inputStatus.classList.add("checkbox");
         divBotoes.classList.add("botoes__edicao__perfil");
         btnExcluir.classList.add("botao__excluir", "botoes");
+
+        btnExcluir.addEventListener("click", (event) => {
+            event.preventDefault();
+            this.modalExcluirHabito();
+        })
         btnSalvar.classList.add("botao__salvar", "botoes");
 
 
@@ -146,14 +145,19 @@ export default class ComponentesModais {
             modal.style.display = "none";
         })
 
+        const habitos = await RequisicoesHabitos.mostrarTodosHabitos();
+        const habito = habitos.find( hab => hab.habit_id === +JSON.parse(localStorage.getItem("@kenzie-habit:habit_id")))
+
         labelTit.innerText      = "Titulo";
-        inputTit.name           = "titulo";
+        inputTit.name           = "habit_title";
         inputTit.type           = "text";
+        inputTit.defaultValue   =  habito.habit_title;
         labelDesc.innerText     = "Descrição";
-        inputDesc.name          = "descricao";
+        inputDesc.name          = "habit_description";
         inputDesc.type          = "text";
+        inputDesc.defaultValue  =  habito.habit_description
         labelCat.innerText      = "Categoria";
-        selectCat.name          = "categoria";
+        selectCat.name          = "habit_category";
         selectCat.id            = "categoria";
         option1.value           = "saude";
         option1.innerText       = "Saúde"
@@ -173,21 +177,25 @@ export default class ComponentesModais {
         btnSalvar.type          = "submit";
         btnSalvar.innerText     = "Salvar alterações";
 
+        
+
         btnSalvar.addEventListener("click", async (event) => {
             event.preventDefault();
-          
-            const data ={};
-            const valoresInput = [...event.srcElement.form];
             const habitoId = JSON.parse(localStorage.getItem("@kenzie-habit:habit_id"));
 
-            valoresInput.forEach((input) => {
-                
-                if(input.value !== "") {
-                    data[input.name] = input.value;
-                }
-            })
-            await RequisicoesHabitos.editarHabito(habitoId,data);
-            window.location.href = "../views/paginaPrincipal.views.hmtl";
+
+            const data ={
+                habit_title: form[0].value,
+                habit_description: form[1].value,
+                habit_category: form[2].value,
+            };
+
+            await RequisicoesHabitos.editarHabito(habitoId, data);
+
+            if(inputStatus.checked) {
+                await RequisicoesHabitos.marcarComoFeito(habitoId);
+            }
+            window.location.reload(true);
         })
 
 
@@ -202,9 +210,10 @@ export default class ComponentesModais {
         modalInfo.append(modalTitulo, divForm);
         modalEdicao.append(modalInfo);
         modal.append(modalEdicao);
+        
         this.body.append(modal);
 
-        // modal.style.display = "none";
+        return modal
     }
 
 
@@ -251,6 +260,12 @@ export default class ComponentesModais {
         p.innerText             = "Após executar essa ação não será possível desfazer.";
         btnCancelar.type        = "submit"
         btnCancelar.innerText   = "Cancelar";
+
+        btnCancelar.addEventListener("click", (event) => {
+            event.preventDefault();
+            modal.parentNode.removeChild(modal)
+        })
+
         btnExcluir.type         = "submit";
         btnExcluir.innerText    = "Sim, excluir este hábito";
 
@@ -260,8 +275,8 @@ export default class ComponentesModais {
           
             const habitoId = JSON.parse(localStorage.getItem("@kenzie-habit:habit_id"));
 
-            await RequisicoesHabitos.removerHabito(habitoId);
-            window.location.href = "../views/paginaPrincipal.views.hmtl";  
+            await RequisicoesHabitos.deletarHabito(habitoId);  
+            window.location.reload(true);
         })
 
 
@@ -274,7 +289,5 @@ export default class ComponentesModais {
         modalEdicao.append(modalInfo);
         modal.append(modalEdicao);
         this.body.append(modal);
-
-        // modal.style.display = "none";
     }
 }
