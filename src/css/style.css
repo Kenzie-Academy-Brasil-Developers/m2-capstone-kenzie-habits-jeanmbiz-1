@@ -3,12 +3,10 @@
 .divHabito {
     width: 100vw;
     height: 100vh;
-
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;  
-
     background-color: var(--cor-cinza-transparencia);
 }
 
@@ -23,7 +21,6 @@
         width: 24.5rem;
         max-width: 100%;
         height: 24rem;
-
         border-radius: 16px;
         overflow: hidden;
         display: flex;
@@ -32,7 +29,6 @@
         flex-direction: column;
         padding: 2rem 1rem;
         position: relative;
-
         background-color: var(--cor-cinza-6);
     }   
 
@@ -40,7 +36,7 @@
         -webkit-transform: scale(1.3);
         -ms-transform: scale(0.5);
         border-radius:10%;
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
     
     .divModalHeader {
@@ -52,16 +48,14 @@
     .divHabito__h2 {
         font-family: var(--font-body);
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 600;
         color: var(--cor-cinza-2)
     }    
 
         .divHabito__p {
             width: 1.5rem;
             height: 1.5rem;
-
             text-decoration: none;
-
             font-family: var(--font-body);
             background-color: transparent;
             cursor: pointer;
@@ -77,7 +71,6 @@
         display: flex;
         flex-direction: column;
         width: 95%;
-
         margin: 5px 0;
     }
 
@@ -91,11 +84,8 @@
 .divHabito__form > div > input {
     margin-top: 5px;
     padding-left: 20px;
-
     line-height: 2rem;
-
     border: none;
-
     font-family: var(--font-body);
     color: var(--cor-cinza-1);
     background-color: var(--cor-cinza-5);
@@ -118,9 +108,7 @@
 .divHabito__form > div > select {
     height: 2rem;
     padding-left: 20px;
-
     font-family: var(--font-body);
-
     border: none;
     background-color: var(--cor-cinza-5);
 }
@@ -128,12 +116,9 @@
 .divHabito__form > button {
     width: 95%;
     height: 35px;
-
     margin-top: 20px;
-
     border: 2px solid  var(--cor-azul-escuro);
     border-radius: 4px;
-
     font-family: var(--font-body);
     color: rgb(248, 249, 250);
     font-weight: 600;
@@ -168,7 +153,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
     background-color: var(--cor-cinza-transparencia);
 }
 
@@ -177,20 +162,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
 }
 
 .modal__informacoes {
-    width: 90%;
+    width: 24.5rem;
     max-width: 100%;
-    height: 31rem;
-    padding: 0.5rem 2rem 2rem 2rem;
-    border-radius: 0.5rem;
-    border: 2rem;
+    height: 24rem;
+    border-radius: 1rem;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
+    align-items: center;
+    padding: 3rem 1rem;
+    position: relative;
     background-color: var(--cor-cinza-6);
 }
 
@@ -198,25 +183,13 @@
     -webkit-transform: scale(1.3);
     -ms-transform: scale(0.5);
     border-radius:10%;
-    transform: scale(1.3);
-}
-
-@media screen and (min-width: 600px) {
-
-    .modal__informacoes {
-        width: 30rem;
-    }
+    transform: scale(1.1);
 }
 
 .info {
     height: 22rem;
     justify-content: space-around;
-}
-
-@media screen and (min-width: 600px) {
-    .info {
-        height: 18rem;
-    }
+    padding: 0.5rem 1.5rem;
 }
 
 .info__perfil {
@@ -228,8 +201,8 @@
 }
 
 .modal__titulo {
+    width: 95%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -252,57 +225,45 @@
 }
 
 .formulario__modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 95%;
+    line-height: 1.8;
 }
 
 .formulario__modal > form {
     display: flex;
     flex-direction: column;
+    width: 95%;
+    margin: 5px 0;
 }
 
 form > label {
     font-size: 0.8rem;
     font-weight: 400;
-    margin-top: 1.7rem;
+    margin-top: 0.3rem;
     margin-bottom: 0.6rem;
     color: var(--cor-cinza-2);
 }
 
 form > input {
-    width: 96%;
     height: 2.5rem;
     padding-left: 0.8rem;
     border: none;
     border-radius: 0.2rem;
+    line-height: 2rem;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--cor-cinza-2);
+    color: var(--cor-cinza-1);
     background-color: var(--cor-cinza-5);
 }
 
-@media screen and (min-width: 589px) {
-    form > input {
-        width: 29rem;
-    }
-}
-
 form > select {
-    width: 99%;
-    height: 2.5rem;
-    padding-left: 0.8rem;
+    height: 2rem;
+    padding-left: 1.2rem;
     border: none;
     border-radius: 0.2rem;
     font-weight: 500;
     background-color: var(--cor-cinza-5);
     color: var(--cor-cinza-2);
-}
-
-@media screen and (min-width: 600px) {
-    form > select {
-        width: 30rem;
-    }
 }
 
 form > .status__checkbox {
@@ -325,15 +286,14 @@ form > .status__checkbox {
 }
 
 form > .botoes__edicao__perfil {
-    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
     width: 100%;
     gap: 5%;
-    display: flex;
-    justify-content: space-between;
 }
 
 .botao__excluir {
-    width: 90%;
+    width: 40%;
     height: 2.5rem;
     border: none;
     border-radius: 0.3rem;
@@ -344,7 +304,7 @@ form > .botoes__edicao__perfil {
 }
 
 .botao__salvar {
-    width: 90%;
+    width: 50%;
     height: 2.5rem;
     border: none;
     border-radius: 0.3rem;
