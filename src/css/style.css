@@ -35,6 +35,13 @@
 
         background-color: var(--cor-cinza-6);
     }   
+
+    .divHabito__modal:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(0.5);
+        border-radius:10%;
+        transform: scale(1.3);
+    }
     
     .divModalHeader {
         width: 95%;
@@ -132,6 +139,13 @@
     font-weight: 600;
     background-color: var(--cor-azul-medio);
     cursor: pointer;
+}
+
+.divHabito__form > button:hover {
+    transition-delay: 0.2s;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
 }
 
 /* MODAIS EDITAR PERFIL - EDITAR HÁBITO E EXCLUIR HÁBITO*/

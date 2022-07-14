@@ -10,7 +10,7 @@ export default class CriarHabito {
         div.classList.add("divHabito")
 
         const container = document.createElement("div")
-        container.classList.add("divHabito__container")
+        container.classList.add("divHabito__container", "animate__animated", "animate__flipOutY")
 
         const modal = document.createElement("div")
         modal.classList.add("divHabito__modal")

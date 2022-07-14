@@ -1,4 +1,7 @@
+import ComponentesModais from "./modais.controller.js";
+
 const usuario = JSON.parse(localStorage.getItem("@kenzie-habits:user"))
+
 
 fazerHeader()
 
@@ -33,8 +36,14 @@ function logout(){
     location.href = '/index.html'
 }
 
-const editarPerfil = document.querySelector('.cabecalho__superior--perfil')
+const imgEditarPerfil = document.querySelector('.cabecalho__superior--perfil')
+const editarPerfil    = document.getElementById('editar__perfil')
 
-editarPerfil.addEventListener('click', () => {
+imgEditarPerfil.addEventListener('click', () => {
     document.querySelector('.menu').classList.toggle("mostrar")
+})
+
+editarPerfil.addEventListener("click", (event)=> {
+    console.log("OI")
+    ComponentesModais.modalEditarPerfil();
 })
