@@ -59,10 +59,6 @@ header {
     cursor: pointer;
 }
 
-.container_menu {
-    
-}
-
 .menu__perfil {
     width: 100%;
     height: 100%;
@@ -72,14 +68,24 @@ header {
     display: none;
     position: absolute;
     background-color: white;
+    width: 7rem;
+    height: 3.3rem;
     padding: 10px 15px;
-    margin-left: -90px;
+    margin-left: -110px;
     margin-top: 5px;
     padding-right: 20px;
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 10px 1px var(--cor-cinza-3);
 }
 
 .menu ul{
     z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu::before{
@@ -88,6 +94,7 @@ header {
     width: 10px;
     height: 10px;
     background-color: white;
+    left: 35px;
     transform: translate(90px, -15px) rotate(45deg);
     z-index: 0;
 }
@@ -96,6 +103,20 @@ header {
     display: flex;
 }
 
+.opcoes__menu {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 300ms;
+}
+
+.editar__perfil:hover {
+    color: var(--cor-azul-medio)
+}
+
+.sair__perfil:hover {
+    color: var(--cor-vermelho-1)
+}
 
 .container__auxiliar {
     width: 100%;
@@ -178,7 +199,7 @@ main {
 }
 
 .criar__habito {
-    padding: 0.2rem 1rem;
+    padding: 0.5rem 1.2rem;
     background-color: var(--cor-azul-medio);
     border: 0px transparent;
     border-radius: 0.2rem;
@@ -241,6 +262,7 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .card__titulo {
@@ -249,6 +271,9 @@ main {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem;
 }
 
 .card__descricao {
@@ -257,6 +282,7 @@ main {
 
 .info__habitos--categoria {
     display: none;
+    cursor: pointer;
 }
 
 .container__editar {
@@ -374,6 +400,7 @@ main {
         white-space: nowrap;
         text-overflow: ellipsis;
         width: 35%;
+        padding: 0.5rem 0rem;
     }
 
     .info__habitos--categoria {
