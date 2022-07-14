@@ -35,10 +35,6 @@ function logout(){
 
 const editarPerfil = document.querySelector('.cabecalho__superior--perfil')
 
-editarPerfil.addEventListener('click', (evento) => {
-  
-   if(evento.target.classList[0] == 'menu__perfil'){
+editarPerfil.addEventListener('click', () => {
     document.querySelector('.menu').classList.toggle("mostrar")
-    } 
 })
-
