@@ -10,7 +10,7 @@ export default class CriarHabito {
         div.classList.add("divHabito")
 
         const container = document.createElement("div")
-        container.classList.add("divHabito__container", "animate__animated", "animate__flipOutY")
+        container.classList.add("divHabito__container")
 
         const modal = document.createElement("div")
         modal.classList.add("divHabito__modal")
@@ -75,23 +75,23 @@ export default class CriarHabito {
 
         const opcao1 = document.createElement("option")
         opcao1.value = "casa"
-        opcao1.innerText = "&#127968; Casa"
+        opcao1.innerHTML = "&#127968; Casa"
 
         const opcao2 = document.createElement("option")
         opcao2.value = "estudos"
-        opcao2.innerText = "&#128218; Estudos"
+        opcao2.innerHTML = "&#128218; Estudos"
 
         const opcao3 = document.createElement("option")
         opcao3.value = "lazer"
-        opcao3.innerText = "&#9917; Lazer"
+        opcao3.innerHTML = "&#9917; Lazer"
 
         const opcao4 = document.createElement("option")
         opcao4.value = "saude"
-        opcao4.innerText = "&#128153; Saúde"
+        opcao4.innerHTML = "&#128153; Saúde"
 
         const opcao5 = document.createElement("option")
         opcao5.value = "trabalho"
-        opcao5.innerText = "&#9874; Trabalho"
+        opcao5.innerHTML = "&#9874; Trabalho"
 
         const botaoInserir = document.createElement("button")
         botaoInserir.type = "submit"

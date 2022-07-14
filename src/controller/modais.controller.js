@@ -28,8 +28,8 @@ export default class ComponentesModais {
 
 
         modal.classList.add("modal__background", "modal__editar__perfil");
-        modalEdicao.classList.add("modal__edicao__perfil", "animate__animated", "animate__flipOutY");
-        modalInfo.classList.add("modal__informacoes", "info__perfil", "animate__animated", "animate__flipOutY");
+        modalEdicao.classList.add("modal__edicao__perfil");
+        modalInfo.classList.add("modal__informacoes", "info__perfil");
         modalTitulo.classList.add("modal__titulo");
         btnFechar.classList.add("botao__fechar");
         imgFechar.classList.add("botao__fechar", "botoes");
@@ -160,15 +160,15 @@ export default class ComponentesModais {
         selectCat.name          = "habit_category";
         selectCat.id            = "categoria";
         option1.value           = "saude";
-        option1.innerText       = "Saúde"
+        option1.innerHTML       = "&#128153;Saúde"
         option2.value           = "estudos";
-        option2.innerText       = "Estudos"
+        option2.innerHTML       = "&#128218;Estudos"
         option3.value           = "casa";
-        option3.innerText       = "Casa"
+        option3.innerHTML       = "&#127968;Casa"
         option4.value           = "trabalho";
-        option4.innerText       = "Trabalho"
+        option4.innerHTML       = "&#9874;Trabalho"
         option5.value           = "lazer";
-        option5.innerText       = "Lazer";
+        option5.innerHTML       = "&#9917;Lazer";
         labelStatus.innerText   = "Status";
         inputStatus.name        = "status";
         inputStatus.type        = "checkbox";
