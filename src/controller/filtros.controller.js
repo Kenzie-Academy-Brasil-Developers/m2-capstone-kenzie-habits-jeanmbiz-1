@@ -1,9 +1,7 @@
-import RequisicoesHabitos from './habitos.controller.js'
+import RequisicoesHabitos from './habitos.controller.js';
 import ComponentesModais from './modais.controller.js';
 
-const containerCards   = document.querySelector('.container__cards')
-
-
+const containerCards = document.querySelector('.container__cards');
 
 export default class Habito {
     static criarCardHabito (habito) {
@@ -32,28 +30,29 @@ export default class Habito {
         editar_2    .classList.add('reticencias');
         editar_3    .classList.add('reticencias');
     
-        divEditar.title  = habito.habit_id;
-        editar_1.title   = habito.habit_id;
-        editar_2.title   = habito.habit_id;
-        editar_3.title   = habito.habit_id;
+        divEditar.title   = habito.habit_id;
+        editar_1 .title   = habito.habit_id;
+        editar_2 .title   = habito.habit_id;
+        editar_3 .title   = habito.habit_id;
 
         checkbox.type = 'checkbox';
         
         titulo   .innerText = habito.habit_title;
         descricao.innerText = habito.habit_description;
         categoria.innerText = habito.habit_category;
+
         checkbox .checked   = habito.habit_status;
 
         if(checkbox.checked) {
-            titulo.style      = 'text-decoration: line-through';
-            divCard.style     = 'background-color: var(--cor-cinza-4)';
+            titulo  .style    = 'text-decoration: line-through';
+            divCard .style    = 'background-color: var(--cor-cinza-4)';
             checkbox.style    = 'cursor: not-allowed;'
             checkbox.disabled = true;
         } else {
-            checkbox.addEventListener('change', () =>  ConcluirHabito(habito, checkbox, titulo, divCard));
+            checkbox.addEventListener('change', () => concluirHabito(habito, checkbox, titulo, divCard));
         }
         
-        categoria.addEventListener('click', () => MostrarProCategoria(categoria))
+        categoria.addEventListener('click', () => mostrarPorCategoria(categoria))
 
         divEditar.addEventListener('click', async (evento) => {
             localStorage.setItem("@kenzie-habit:habit_id", evento.target.title);
@@ -70,9 +69,9 @@ export default class Habito {
 
 
 const todos = document.querySelector('.todos');
-todos.addEventListener('click', MostrarTodos);
+todos.addEventListener('click', mostrarTodos);
 
-export async function MostrarTodos () {
+export async function mostrarTodos () {
     containerCards.innerHTML = '';
     
     const listaHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
@@ -80,15 +79,15 @@ export async function MostrarTodos () {
     listaHabitos.forEach(habito => Habito.criarCardHabito(habito));
 }
 
-MostrarTodos()
+mostrarTodos()
 
-export function ConcluirHabito (habito, checkbox, titulo, divCard) {
+export function concluirHabito (habito, checkbox, titulo, divCard) {
 
     titulo  .style   = 'text-decoration: line-through';
     divCard .style  = 'background-color: var(--cor-cinza-4)';
-    checkbox.style = 'cursor: not-allowed;'
+    checkbox.style = 'cursor: not-allowed;';
 
-    checkbox.title = 'Bloquado'
+    checkbox.title = 'Bloquado';
 
     checkbox.disabled = true;
 
@@ -97,29 +96,28 @@ export function ConcluirHabito (habito, checkbox, titulo, divCard) {
 
 
 const concluidos = document.querySelector('.concluido');
-concluidos.addEventListener('click', MostrarConcluidos);
+concluidos.addEventListener('click', mostrarConcluidos);
 
-export async function MostrarConcluidos () {
+export async function mostrarConcluidos () {
     containerCards.innerHTML = '';
 
     const todosHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
 
     todosHabitos.forEach(habito => {if(habito.habit_status === true) {
-            Habito.criarCardHabito(habito)
+            Habito.criarCardHabito(habito);
         }}
     );
     
 }
 
 
-
-export async function MostrarProCategoria (categoria) {
+export async function mostrarPorCategoria (categoria) {
     containerCards.innerHTML = '';
 
     const todosHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
 
     todosHabitos.forEach(habito => {if(habito.habit_category === categoria.innerText) {
-            Habito.criarCardHabito(habito)
+            Habito.criarCardHabito(habito);
         }}
     );
 }
