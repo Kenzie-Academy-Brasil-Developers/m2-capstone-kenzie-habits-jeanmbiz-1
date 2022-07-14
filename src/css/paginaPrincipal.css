@@ -200,11 +200,7 @@ main {
 }
 
 .criar__habito {
-<<<<<<< HEAD
-    padding: 0.35rem 1.1rem;
-=======
     padding: 0.5rem 1.2rem;
->>>>>>> 74ff405698bf41e54541587d036a4880e71203e3
     background-color: var(--cor-azul-medio);
     border: 0px transparent;
     border-radius: 0.2rem;
