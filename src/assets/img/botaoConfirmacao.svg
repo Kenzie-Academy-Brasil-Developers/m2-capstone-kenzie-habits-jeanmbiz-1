@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240"
+   height="240"
+   viewBox="0 0 240 240"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="/tmp/ink_ext_XXXXXX.svgPPRIP1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview261"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.25"
+     inkscape:cx="453.5"
+     inkscape:cy="453.5"
+     inkscape:window-width="1636"
+     inkscape:window-height="1053"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs256" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:none;stroke-width:0.268993"
+       id="g58"
+       transform="matrix(3.7681504,0,0,3.6676902,10.003312,8.9416)">
+      <rect
+         width="59"
+         height="59"
+         rx="29.5"
+         fill="#56cf8e"
+         id="rect49"
+         x="0"
+         y="0"
+         style="stroke-width:0.0711622" />
+    </g>
+    <g
+       style="fill:none;stroke-width:0.268993"
+       id="g69"
+       transform="matrix(3.7681504,0,0,3.6676902,62.825358,70.850744)">
+      <path
+         d="m 10.5049,22.6748 c 0.6055,0.6055 1.6347,0.6055 2.2402,0 L 30.5459,4.87402 c 0.6055,-0.60547 0.6055,-1.63476 0,-2.24023 L 28.3662,0.454102 c -0.6055,-0.605469 -1.5742,-0.605469 -2.1797,0 L 11.6553,14.9854 4.81348,8.2041 c -0.60547,-0.60547 -1.57422,-0.60547 -2.17969,0 l -2.179688,2.1797 c -0.605469,0.6055 -0.605469,1.6348 0,2.2402 z"
+         fill="#ffffff"
+         id="path60"
+         style="stroke-width:0.0711622" />
+    </g>
+  </g>
+</svg>
