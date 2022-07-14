@@ -44,7 +44,7 @@ export default class ComponentesModais {
         imgFechar.src = "../assets/botaoFechar.svg";
         imgFechar.alt = "botão fechar";
 
-        btnFechar.addEventListener("click", (event) => {
+        btnFechar.addEventListener("click", () => {
             modal.style.display = "none";
         })
 
@@ -141,7 +141,7 @@ export default class ComponentesModais {
         imgFechar.src   = "../assets/botaoFechar.svg";
         imgFechar.alt   = "botão fechar";
 
-        btnFechar.addEventListener("click", (event) => {
+        btnFechar.addEventListener("click", () => {
             modal.style.display = "none";
         })
 
@@ -252,7 +252,7 @@ export default class ComponentesModais {
         imgFechar.src   = "../assets/botaoFechar.svg";
         imgFechar.alt   = "botão fechar";
 
-        btnFechar.addEventListener("click", (event) => {
+        btnFechar.addEventListener("click", () => {
             modal.style.display = "none";
         })
 

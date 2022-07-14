@@ -46,10 +46,7 @@ export default class RequisicoesHabitos {
       },
       body: JSON.stringify(dados_editados)
     })
-    .then(res => {
-      console.log(res)
-      return res.json()
-    })
+    .then(res => res.json())
     .catch(err => console.log(err));
   }
 
