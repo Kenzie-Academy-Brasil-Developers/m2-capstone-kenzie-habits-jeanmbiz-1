@@ -22,15 +22,23 @@ function fazerHeader(){
     cabecalhoInferior.appendChild(imgInferior)
 }
 
+
+
 const sairPerfil = document.querySelector('.sair__perfil')
 sairPerfil.addEventListener('click', logout)
 
-function logout(evento){
+function logout(){
     localStorage.removeItem('@kenzie-habits:user')
     localStorage.removeItem('@kenzie-habits:token')
     location.href = '/index.html'
 }
 
+const editarPerfil = document.querySelector('.cabecalho__superior--perfil')
 
-
+editarPerfil.addEventListener('click', (evento) => {
+  
+   if(evento.target.classList[0] == 'menu__perfil'){
+    document.querySelector('.menu').classList.toggle("mostrar")
+    } 
+})
 

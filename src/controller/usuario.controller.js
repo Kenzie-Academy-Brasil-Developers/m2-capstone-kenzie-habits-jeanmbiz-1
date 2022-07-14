@@ -1,6 +1,6 @@
 export default class RequisicoesUsuario {
   static url_base = "https://habits-kenzie.herokuapp.com/api";
-  static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"));
+  static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"))
 
   static async login(dados_usuario) {
     return await fetch(`${this.url_base}/userLogin`, {
