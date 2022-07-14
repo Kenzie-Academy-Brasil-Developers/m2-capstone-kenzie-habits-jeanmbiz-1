@@ -70,7 +70,32 @@ header {
 
 .menu {
     display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px 15px;
+    margin-left: -90px;
+    margin-top: 5px;
+    padding-right: 20px;
 }
+
+.menu ul{
+    z-index: 1000;
+}
+
+.menu::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    transform: translate(90px, -15px) rotate(45deg);
+    z-index: 0;
+}
+
+.mostrar{
+    display: flex;
+}
+
 
 .container__auxiliar {
     width: 100%;

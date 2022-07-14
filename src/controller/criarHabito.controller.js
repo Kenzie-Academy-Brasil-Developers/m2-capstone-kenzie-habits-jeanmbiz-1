@@ -21,6 +21,7 @@ export default class CriarHabito {
             event.preventDefault()
             const habitos = this.criaDadosFormulario()
             await RequisicoesHabitos.criarHabito(habitos)
+            location.href = "./paginaPrincipal.views.html"
         })
          
     }
