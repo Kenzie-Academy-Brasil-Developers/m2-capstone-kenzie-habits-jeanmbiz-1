@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2.5rem;
+    height: 2.8rem;
     width: 90%;
     max-width: 50rem;
 }
@@ -170,9 +170,9 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
-    border: solid 1px var(--cor-cinza-3);
+    border: solid 1px var(--cor-cinza-4);
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 .barra_superior {
@@ -191,7 +191,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0.7rem;
+    gap: 1rem;
 }
 
 .filtro {
@@ -252,7 +252,8 @@ main {
     margin-top: 1rem;
     width: 100%;
     gap: 1rem;
-    border: solid 1px var(--cor-cinza-3);
+    background-color: var(--cor-cinza-6);
+    border: solid 1px var(--cor-cinza-4);
     padding: 1rem 0;
     border-radius: 0.5rem;
 

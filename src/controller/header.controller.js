@@ -15,7 +15,7 @@ function fazerHeader(){
     const cabecalhoInferior = document.querySelector('.cabecalho__inferior--foto')
 
     const imgInferior = document.createElement('img')
-    imgInferior.classList.add('foto__perfil')
+    imgInferior.classList.add('foto__perfil', 'animate__animated', 'animate__flip')
     imgInferior.src = usuario.usr_image
 
     const nomeUsuario = document.querySelector('.nome__usuario')

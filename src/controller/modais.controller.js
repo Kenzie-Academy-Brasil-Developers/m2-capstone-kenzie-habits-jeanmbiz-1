@@ -28,8 +28,8 @@ export default class ComponentesModais {
 
 
         modal.classList.add("modal__background", "modal__editar__perfil");
-        modalEdicao.classList.add("modal__edicao__perfil");
-        modalInfo.classList.add("modal__informacoes", "info__perfil");
+        modalEdicao.classList.add("modal__edicao__perfil", "animate__animated", "animate__flipOutY");
+        modalInfo.classList.add("modal__informacoes", "info__perfil", "animate__animated", "animate__flipOutY");
         modalTitulo.classList.add("modal__titulo");
         btnFechar.classList.add("botao__fechar");
         imgFechar.classList.add("botao__fechar", "botoes");

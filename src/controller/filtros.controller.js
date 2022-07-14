@@ -112,6 +112,7 @@ export async function MostrarConcluidos () {
 }
 
 
+
 export async function MostrarProCategoria (categoria) {
     containerCards.innerHTML = '';
 
