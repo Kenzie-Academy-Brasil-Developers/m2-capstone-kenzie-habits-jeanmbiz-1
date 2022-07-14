@@ -51,6 +51,8 @@ export default class Habito {
             checkbox.addEventListener('change', () =>  ConcluirHabito(habito, checkbox, titulo, divCard));
         }
 
+        categoria.addEventListener('click', () => MostrarProCategoria(categoria))
+
         divEditar.addEventListener('click', (evento) => {
             localStorage.setItem("@kenzie-habit:habit_id", evento.target.title);
         });
@@ -63,25 +65,24 @@ export default class Habito {
     }
 }
 
-MostrarTodos()
-
 
 const todos = document.querySelector('.todos');
 todos.addEventListener('click', MostrarTodos);
 
 export async function MostrarTodos () {
     containerCards.innerHTML = '';
-
+    
     const listaHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
-
+    
     listaHabitos.forEach(habito => Habito.criarCardHabito(habito));
 }
 
+MostrarTodos()
 
 export function ConcluirHabito (habito, checkbox, titulo, divCard) {
 
-    titulo.style   = 'text-decoration: line-through';
-    divCard.style  = 'background-color: var(--cor-cinza-4)';
+    titulo  .style   = 'text-decoration: line-through';
+    divCard .style  = 'background-color: var(--cor-cinza-4)';
     checkbox.style = 'cursor: not-allowed;'
 
     checkbox.title = 'Bloquado'
@@ -106,3 +107,14 @@ export async function MostrarConcluidos () {
     );
 }
 
+
+export async function MostrarProCategoria (categoria) {
+    containerCards.innerHTML = '';
+
+    const todosHabitos = await RequisicoesHabitos.mostrarTodosHabitos();
+
+    todosHabitos.forEach(habito => {if(habito.habit_category === categoria.innerText) {
+            Habito.criarCardHabito(habito)
+        }}
+    );
+}
