@@ -1,347 +1,345 @@
 /*MODAL DE CRIAR HÁBITO*/
 
 .divHabito {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;  
-    background-color: var(--cor-cinza-transparencia);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--cor-cinza-transparencia);
 }
 
-    .divHabito__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: inherit;        
-    }
+.divHabito__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
 
-    .divHabito__modal {
-        width: 24.5rem;
-        max-width: 100%;
-        height: 24rem;
-        border-radius: 16px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        padding: 2rem 1rem;
-        position: relative;
-        background-color: var(--cor-cinza-6);
-    }   
+.divHabito__modal {
+  width: 24.5rem;
+  max-width: 100%;
+  height: 24rem;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  position: relative;
+  background-color: var(--cor-cinza-6);
+}
 
-    .divHabito__modal:hover {
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(0.5);
-        border-radius:10%;
-        transform: scale(1.1);
-    }
-    
-    .divModalHeader {
-        width: 95%;
-        display: flex;
-        justify-content: space-between;
-    }
+.divHabito__modal:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(0.5);
+  border-radius: 10%;
+  transform: scale(1.1);
+}
 
-    .divHabito__h2 {
-        font-family: var(--font-body);
-        font-size: 20px;
-        font-weight: 600;
-        color: var(--cor-cinza-2)
-    }    
+.divModalHeader {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
 
-        .divHabito__p {
-            width: 1.5rem;
-            height: 1.5rem;
-            text-decoration: none;
-            font-family: var(--font-body);
-            background-color: transparent;
-            cursor: pointer;
-            color: var(--cor-cinza-3);
-        }
+.divHabito__h2 {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cor-cinza-2);
+}
 
-    .divHabito__form {
-        width: 95%;
-        line-height: 1.8;
-    }    
-    
-    .divHabito__form > div {
-        display: flex;
-        flex-direction: column;
-        width: 95%;
-        margin: 5px 0;
-    }
+.divHabito__p {
+  width: 1.5rem;
+  height: 1.5rem;
+  text-decoration: none;
+  font-family: var(--font-body);
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--cor-cinza-3);
+}
 
+.divHabito__form {
+  width: 95%;
+  line-height: 1.8;
+}
+
+.divHabito__form > div {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 5px 0;
+}
 
 .divHabito__form > div > label {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--cor-cinza-1);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--cor-cinza-1);
 }
 
 .divHabito__form > div > input {
-    margin-top: 5px;
-    padding-left: 20px;
-    line-height: 2rem;
-    border: none;
-    font-family: var(--font-body);
-    color: var(--cor-cinza-1);
-    background-color: var(--cor-cinza-5);
+  margin-top: 5px;
+  padding-left: 20px;
+  line-height: 2rem;
+  border: none;
+  font-family: var(--font-body);
+  color: var(--cor-cinza-1);
+  background-color: var(--cor-cinza-5);
 }
 
 #descricaoCriarHabito {
-    height: 5rem;
-    margin-top: 5px;
-    padding-left: 20px;
+  height: 5rem;
+  margin-top: 5px;
+  padding-left: 20px;
 
-    line-height: 2rem;
+  line-height: 2rem;
 
-    border: none;
+  border: none;
 
-    font-family: var(--font-body);
-    color: var(--cor-cinza-1);
-    background-color: var(--cor-cinza-5);
+  font-family: var(--font-body);
+  color: var(--cor-cinza-1);
+  background-color: var(--cor-cinza-5);
 }
 
 .divHabito__form > div > select {
-    height: 2rem;
-    padding-left: 20px;
-    font-family: var(--font-body);
-    border: none;
-    background-color: var(--cor-cinza-5);
+  height: 2rem;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  border: none;
+  background-color: var(--cor-cinza-5);
 }
 
 .divHabito__form > button {
-    width: 95%;
-    height: 35px;
-    margin-top: 20px;
-    border: 2px solid  var(--cor-azul-escuro);
-    border-radius: 4px;
-    font-family: var(--font-body);
-    color: rgb(248, 249, 250);
-    font-weight: 600;
-    background-color: var(--cor-azul-medio);
-    cursor: pointer;
+  width: 95%;
+  height: 35px;
+  margin-top: 20px;
+  border: 2px solid var(--cor-azul-escuro);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  color: rgb(248, 249, 250);
+  font-weight: 600;
+  background-color: var(--cor-azul-medio);
+  cursor: pointer;
 }
 
 .divHabito__form > button:hover {
-    transition-delay: 0.2s;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+  transition-delay: 0.2s;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
 }
 
 /* MODAIS EDITAR PERFIL - EDITAR HÁBITO E EXCLUIR HÁBITO*/
 
-
 .botoes {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .botoes:hover {
-    transition-delay: 0.2s; 
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+  transition-delay: 0.2s;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
 }
 
 .modal__background {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: var(--cor-cinza-transparencia);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--cor-cinza-transparencia);
 }
 
 .modal__edicao__perfil {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__informacoes {
-    width: 24.5rem;
-    max-width: 100%;
-    height: 24rem;
-    border-radius: 1rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 1rem;
-    position: relative;
-    background-color: var(--cor-cinza-6);
+  width: 24.5rem;
+  max-width: 100%;
+  height: 24rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  position: relative;
+  background-color: var(--cor-cinza-6);
 }
 
 .modal__informacoes:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(0.5);
-    border-radius:10%;
-    transform: scale(1.1);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(0.5);
+  border-radius: 10%;
+  transform: scale(1.1);
 }
 
 .info {
-    height: 22rem;
-    justify-content: space-around;
-    padding: 0.5rem 1.5rem;
+  height: 22rem;
+  justify-content: space-around;
+  padding: 0.5rem 1.5rem;
 }
 
 .info__perfil {
-    height: 21rem;
+  height: 21rem;
 }
 
 .modal__info__perfil {
-    height: 22rem;
+  height: 22rem;
 }
 
 .modal__titulo {
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__titulo > h4 {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--cor-cinza-1);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cor-cinza-1);
 }
 
 .texto__modal > h4 {
-    margin-bottom: 0.5rem;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--cor-cinza-1);
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cor-cinza-1);
 }
 
 .botao__fechar {
-    border: none;
-    background-color: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 .formulario__modal {
-    width: 95%;
-    line-height: 1.8;
+  width: 95%;
+  line-height: 1.8;
 }
 
 .formulario__modal > form {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 5px 0;
 }
 
 form > label {
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-top: 0.3rem;
-    margin-bottom: 0.6rem;
-    color: var(--cor-cinza-2);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
+  color: var(--cor-cinza-2);
 }
 
 form > input {
-    height: 2.5rem;
-    padding-left: 0.8rem;
-    border: none;
-    border-radius: 0.2rem;
-    line-height: 2rem;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--cor-cinza-1);
-    background-color: var(--cor-cinza-5);
+  height: 2.5rem;
+  padding-left: 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-cinza-1);
+  background-color: var(--cor-cinza-5);
 }
 
 form > select {
-    height: 2rem;
-    padding-left: 1.2rem;
-    border: none;
-    border-radius: 0.2rem;
-    font-weight: 500;
-    background-color: var(--cor-cinza-5);
-    color: var(--cor-cinza-2);
+  height: 2rem;
+  padding-left: 1.2rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-weight: 500;
+  background-color: var(--cor-cinza-5);
+  color: var(--cor-cinza-2);
 }
 
 form > .status__checkbox {
-    margin-top: 1.7rem;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 1.7rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .status__form {
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--cor-cinza-1);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--cor-cinza-1);
 }
 
 .checkbox {
-    width: 1rem;
-    border: 1px solid var(--cor-cinza-3);
-    background-color: transparent;
+  width: 1rem;
+  border: 1px solid var(--cor-cinza-3);
+  background-color: transparent;
 }
 
 form > .botoes__edicao__perfil {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 5%;
 }
 
 .botao__excluir {
-    width: 40%;
-    height: 2.5rem;
-    border: none;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: var(--cor-cinza-5);
-    color: var(--cor-cinza-2);
+  width: 40%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--cor-cinza-5);
+  color: var(--cor-cinza-2);
 }
 
 .botao__salvar {
-    width: 50%;
-    height: 2.5rem;
-    border: none;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: var(--cor-azul-medio-2);
-    color: var(--cor-cinza-6);
+  width: 50%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--cor-azul-medio-2);
+  color: var(--cor-cinza-6);
 }
 
 .excluir {
-    background-color: var(--cor-vermelho-2);
-    font-size: 0.6rem;
+  background-color: var(--cor-vermelho-2);
+  font-size: 0.6rem;
 }
 
 .cancelar {
-    margin-bottom: 0.2rem;
-    font-size: 0.6rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.6rem;
 }
 
 .btn__salvar {
-    width: 40rem;
+  width: 40rem;
 }
 
 .botoes__excluir__perfil {
-    width: 100%;
-    font-size: 0.2rem;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  font-size: 0.2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 600px) {
-    .cancelar {
-        width: 30%;
-        font-size: 1rem;
-    }
-    .excluir {
-        width: 60%;
-        font-size: 1rem;
-    }
+  .cancelar {
+    width: 30%;
+    font-size: 1rem;
+  }
+  .excluir {
+    width: 60%;
+    font-size: 1rem;
+  }
 }

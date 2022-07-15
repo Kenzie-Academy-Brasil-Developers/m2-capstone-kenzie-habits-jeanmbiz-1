@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link rel="stylesheet" href="../css/paginaPrincipal.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Kenzie Habit</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/paginaPrincipal.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Kenzie Habit</title>
+  </head>
 
-    <body>
-        <header>
-            <div class="container__cabecalho">
-                <div class="container__cabecalho--superior">
-                    <div class="cabecalho__superior--logotipo">
-                        <h2 class="logotipo animate__animated animate__heartBeat">KenzieHabit</h2>
-                    </div>
+  <body>
+    <header>
+      <div class="container__cabecalho">
+        <div class="container__cabecalho--superior">
+          <div class="cabecalho__superior--logotipo">
+            <h2 class="logotipo animate__animated animate__heartBeat">
+              KenzieHabit
+            </h2>
+          </div>
 
-                    <div class="container_menu">
-                        <div class="cabecalho__superior--perfil">
-
-                        </div>
-                        <div class="menu">
-                            <ul>
-
-                                <li id="editar__perfil" class="editar__perfil opcoes__menu">Editar Perfil</li>
-                                <li class="sair__perfil opcoes__menu">Sair do App</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container__auxiliar ">
-                    <div class="container__cabecalho--inferior">
-                        <div class="cabecalho__inferior--foto">
-
-                        </div>
-    
-                        <div class="cabecalho__inferior--nome">
-                            <h2 class="nome__usuario"></h2>
-                        </div>
-                    </div>
-                </div>
+          <div class="container_menu">
+            <div class="cabecalho__superior--perfil"></div>
+            <div class="menu">
+              <ul>
+                <li id="editar__perfil" class="editar__perfil opcoes__menu">
+                  Editar Perfil
+                </li>
+                <li class="sair__perfil opcoes__menu">Sair do App</li>
+              </ul>
             </div>
-        </header>
+          </div>
+        </div>
 
-        <main>
-            <div class="container__principal">
-                <div class="barra_superior">
-                    <div class="barra__superior--tarefas">
-                        <h2 class="titulo">Tarefas</h2>
-                    </div>
-                    <div class="barra__superior--filtros">
-                        
-                        <h2 class="filtro todos">Todos</h2>
-                        <h2 class="filtro concluido">Concluídos</h2>
-                        <button class="criar__habito" id="botaoCriarHabito">Criar</button>
-                        
-                    </div>
-                </div>
-                <div class="container__habitos">
-                    <div class="legenda__habitos">
-                        <h3 class="legenda__habitos--status">Status</h3>
-                        <h3 class="legenda__habitos--titulo">Título</h3>
-                        <h3 class="legenda__habitos--descricao">Descrição</h3>
-                        <h3 class="legenda__habitos--categoria">Categoria</h3>
-                        <h3 class="legenda__habitos--editar">Editar</h3>
-                    </div>
+        <div class="container__auxiliar">
+          <div class="container__cabecalho--inferior">
+            <div class="cabecalho__inferior--foto"></div>
 
-                    <div class="container__cards">
-
-
-                    </div>
-                </div>
+            <div class="cabecalho__inferior--nome">
+              <h2 class="nome__usuario"></h2>
             </div>
-            <div class="container__carregar_mais">
-                <button class="botao__carregar_mais">Carregar mais</button>
-            </div>
-        </main>
+          </div>
+        </div>
+      </div>
+    </header>
 
-        <script type="module" src="../controller/filtros.controller.js"></script>
-        <script type="module" src="../controller/modais.controller.js"></script>
-        <script type="module" src="../controller/header.controller.js"></script>
-        <script type="module" src="../script.js"></script>
-    </body>
+    <main>
+      <div class="container__principal">
+        <div class="barra_superior">
+          <div class="barra__superior--tarefas">
+            <h2 class="titulo">Tarefas</h2>
+          </div>
+          <div class="barra__superior--filtros">
+            <h2 class="filtro todos">Todos</h2>
+            <h2 class="filtro concluido">Concluídos</h2>
+            <button class="criar__habito" id="botaoCriarHabito">Criar</button>
+          </div>
+        </div>
+        <div class="container__habitos">
+          <div class="legenda__habitos">
+            <h3 class="legenda__habitos--status">Status</h3>
+            <h3 class="legenda__habitos--titulo">Título</h3>
+            <h3 class="legenda__habitos--descricao">Descrição</h3>
+            <h3 class="legenda__habitos--categoria">Categoria</h3>
+            <h3 class="legenda__habitos--editar">Editar</h3>
+          </div>
+
+          <div class="container__cards"></div>
+        </div>
+      </div>
+      <div class="container__carregar_mais">
+        <button class="botao__carregar_mais">Carregar mais</button>
+      </div>
+    </main>
+
+    <script type="module" src="../controller/filtros.controller.js"></script>
+    <script type="module" src="../controller/modais.controller.js"></script>
+    <script type="module" src="../controller/header.controller.js"></script>
+    <script type="module" src="../script.js"></script>
+  </body>
 </html>

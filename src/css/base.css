@@ -1,4 +1,3 @@
-
 :root {
   --cor-azul-medio: rgb(65, 90, 243);
   --cor-azul-medio-2: rgb(160, 173, 249);
@@ -15,6 +14,6 @@
   --cor-verde-claro: rgb(230, 248, 238);
   --cor-vermelho-1: rgb(230, 68, 69);
   --cor-vermelho-2: rgb(240, 56, 57);
-  
-  --font-body: 'Inter', sans-serif;
+
+  --font-body: "Inter", sans-serif;
 }
